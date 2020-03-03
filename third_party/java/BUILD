@@ -7,10 +7,10 @@ package(default_visibility = ["PUBLIC"])
 # This fetches new build rules from an external source.
 # In this case maven_jars, which we use below to fetch all transitive dependencies
 # of a Maven package.
-subinclude("@pleasings//java:maven_jars")
+subinclude("///pleasings//java:maven_jars")
 
 # This is temporarily necessary to work around a small bug.
-package(maven_tool = "@pleasings//java/maven")
+package(maven_tool = "///pleasings//java/maven")
 
 maven_jars(
     name = "mapdb",
